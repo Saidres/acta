@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💞¿Quieres ser Mi Novia?💕</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/modal.css">
+    <link rel="shortcut icon" href="img/logo.png">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="container">
+            <h1 class="letra-neon">¿Quieres ser mi Novia?</h1>
+            <p class="neon3">
+                <span class="flicker1">❤</span>
+                <span class="flicker2">❤</span>
+                <span class="flicker3"></span>
+            </p>
+        </div>
+        <div>
+            <img src="img/cat.gif" alt="Cat">
+            <br>
+        </div>
+        <button id="yesBtn" class="bn-neon open-modal" data-open="modal1">SI</button>
+        <button id="noBtn">NO</button>
+        <br><br><br><br>
+        <audio id="background-audio" loop>
+            <source src="media/audio.mp3" type="audio/mp3">
+        </audio>
+    </div>
+    <div id="message" style="display: none;">
+        <h1>Siempre supe que dirías que sí <br>😉</h1>
+        <img src="img/R.jpeg" width="300" alt="gato">
+        <br>
+        <a href="otra_pagina.html"><button id="verBtn" class="verBtn">Mirar documento</button></a>
+    </div>
+    <div class="burbujas">
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+    </div>
+    <script src="src/js.js"></script>
+    <script src="src/modal.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var audio = document.getElementById("background-audio");
+
+            // Manejar la visibilidad de la página para controlar la reproducción del audio
+            document.addEventListener("visibilitychange", function() {
+                if (document.hidden) {
+                    audio.pause();
+                } else {
+                    audio.play();
+                }
+            });
+
+            // Reproducir audio cuando el usuario interactúa con la página
+            document.body.addEventListener("click", function() {
+                audio.play();
+            });
+
+            document.getElementById("yesBtn").addEventListener("click", function() {
+                document.getElementById("message").style.display = "flex";
+            });
+        });
+    </script>
+</body>
+</html>

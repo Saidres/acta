@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen Especial</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <style>
+        body {
+            background-image: linear-gradient(135deg, #00e7d4, #505488, #ef3f80, #161569, #ef3f80, #505488, #00E7D4);
+            background-size: 500%;
+            animation: fanimado 60s infinite;
+        }
+
+        .contenedor {
+            width: 100vw;
+            height: 100vh;
+            text-align: center;
+            padding: 2%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 0 0 5px pink, 0 0 15px pink, 0 0 30px pink, 0 0 50px pink;
+        }
+
+        img {
+            width: 25%;
+            max-width: 600px;
+            height: auto;
+            margin: 30px;
+            border: 2px solid white;
+            box-shadow: 0 0 10px white, 0 0 20px white;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Nuestra acta de matrimonio, te quiero </h1>
+        <img src="img/acta.jpg" alt="Imagen">
+    </div>
+</body>
+</html>
